@@ -1,0 +1,130 @@
+h1 {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 15px;
+  font-family: 'Ubuntu', sans-serif;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+p {
+  padding-top: 5px;
+  margin-top: 5px;
+}
+
+.container figure {
+  margin: 10px 0px 10px 0px;
+}
+
+.container img {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.header-content {
+  justify-self: center;
+  grid-area: header;
+}
+
+.main-content {
+  grid-area: main;
+  padding-top: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.main-content img {
+  justify-self: center;
+  width: 100%;
+  object-fit: cover;
+}
+
+.footer-content {
+  justify-self: center;
+  grid-area: footer;
+  padding: 15px;
+}
+
+.header-content {
+  padding-top: 5px;
+}
+
+.main-content {
+  padding-top: 0px;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.article-listicle {
+  padding-bottom: 1.5em;
+}
+
+@media (max-width: 1024px) {
+.container {
+  grid-template-columns: 100%;
+}
+}
+
+@media (min-width: 1025px) {
+.container {
+  grid-template-columns: 1024px;
+}
+}
+
+@media (max-width: 800px) {
+.main-content, .footer-content, .header-content {
+  padding: 30px;
+}
+}
+
+.gallery-container {
+  position: relative;
+}
+
+.gallery-buttons {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "previous next";
+  position: absolute;
+  top: 12px;
+}
+
+.gallery-button-previous {
+  justify-self: start;
+  margin-left: 10px;
+}
+
+.gallery-button-next {
+  justify-self: end;
+  margin-right: 10px;
+}
+
